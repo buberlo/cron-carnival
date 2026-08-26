@@ -1,0 +1,34 @@
+# Rust build artifacts
+/target
+**/*.rs.bk
+*.pdb
+
+# Cargo
+# Keep Cargo.lock for reproducible CLI builds.
+# Uncomment if you prefer to ignore it:
+# Cargo.lock
+
+# Local YAML schedule overrides
+rides.local.yaml
+rides.override.yaml
+rides.*.local.yaml
+rides.*.override.yaml
+*.local.yaml
+*.override.yaml
+config.local.yaml
+schedule.local.yaml
+
+# Generated runtime artifacts
+*.log
+*.tmp
+/tmp/
+/reports/
+/fireworks/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
