@@ -1,0 +1,66 @@
+# rides.yaml
+# Sample schedule for the carnival carousel.
+#
+# `tick_interval_ms` controls how often the live carousel repaints.
+# `replay` controls the ANSI confetti fireworks shown after successful rides.
+#
+# Each ride is a simulated job with:
+#   - name: the ride/job label shown in the carousel
+#   - priority: higher values are scheduled first
+#   - duration_ms: simulated run time
+#   - retries: how many times the scheduler may retry the ride
+#   - fail_rate: 0.0 to 1.0 probability of failing on a run
+#   - fix_hint: one-line suggestion shown in the clown failure report
+
+tick_interval_ms: 350
+
+replay:
+  enabled: true
+  duration_ms: 1600
+  confetti_count: 70
+
+rides:
+  - name: "Ferris Wheel"
+    priority: 10
+    duration_ms: 1400
+    retries: 2
+    fail_rate: 0.10
+    fix_hint: "Lubricate the hub bearing and re-torque the axle bolts."
+
+  - name: "Tea Cups"
+    priority: 9
+    duration_ms: 900
+    retries: 1
+    fail_rate: 0.35
+    fix_hint: "Clean the cup motor contacts before the next spin."
+
+  - name: "Bumper Cars"
+    priority: 8
+    duration_ms: 1100
+    retries: 3
+    fail_rate: 0.25
+    fix_hint: "Replace the cracked bumper rubber and check the battery clamp."
+
+  - name: "Haunted House"
+    priority: 7
+    duration_ms: 1800
+    retries: 1
+    fail_rate: 0.80
+    fix_hint: "Reseat the fog machine power cable and clear the sensor lens."
+
+  - name: "Cotton Candy"
+    priority: 6
+    duration_ms: 700
+    retries: 0
+    fail_rate: 0.05
+    fix_hint: "Swap the clogged sugar nozzle before the next batch."
+
+  - name: "Tilt-A-Whirl"
+    priority: 5
+    duration_ms: 1250
+    retries: 2
+    fail_rate: 0.15
+    fix_hint: "Tighten the tilt arm pivot and inspect the safety latch."
+
+  - name: "Circus Train"
+    priority: 4
