@@ -1,0 +1,26 @@
+[package]
+name = "carnival-scheduler"
+version = "0.1.0"
+edition = "2021"
+description = "Schedules jobs as carnival rides with a live terminal carousel, jester mood, failure reports, and ANSI confetti fireworks."
+license = "MIT"
+rust-version = "1.75"
+
+[[bin]]
+name = "carnival-scheduler"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.27"
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
